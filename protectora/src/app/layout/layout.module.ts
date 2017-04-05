@@ -9,6 +9,10 @@ import { LayoutComponent } from './layout.component';
     CommonModule,
     LayoutRoutingModule
   ],
+  exports:[
+    LayoutRoutingModule,
+    LayoutComponent
+  ],
   declarations: [LayoutComponent]
 })
 export class LayoutModule { }

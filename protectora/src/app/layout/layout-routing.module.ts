@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'inicio', loadChildren: './../home/home.module#HomeModule' },
-  { path: 'animales', loadChildren: './../animales/nuevo/nuevo.module#NuevoModule' },
+  { path: '', loadChildren: './../home/home.module#HomeModule' },
+  { path: 'animales', loadChildren: './../animales/animales.module#AnimalesModule' },
 
 ];
 

@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NuevoComponent } from './nuevo/nuevo.component';
+
+import { AnimalesRoutingModule } from './animales-routing.module';
+import {NuevoComponent} from './nuevo/nuevo.component'
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    AnimalesRoutingModule
   ],
   declarations: [NuevoComponent]
 })
