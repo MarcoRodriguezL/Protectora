@@ -1,0 +1,14 @@
+<p>
+  Nuevo animal
+</p>
+<form (ngSubmit)="guardarAnimal(nuevoAnimal)" [formGroup]="nuevoAnimal" novalidate>
+  <div class="row">
+    <label for="tipo" class="column">Tipo: </label>
+    <select name="tipo" class="column">
+      <option value="" selected>Selecciona un tipo de animal</option>
+      <option *ngFor="let tipo of tipos" [value]="tipo.id">
+        {{tipo.nombre}}
+      </option>
+    </select>
+  </div>
+</form>
