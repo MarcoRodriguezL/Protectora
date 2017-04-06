@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { DatosUsuario } from './../shared/model/model';
 import { UsuarioStoreService } from './../shared/usuario-store.service';
+import { Observable } from 'rxjs/Rx';
 
 import 'rxjs/operators/map';
 
@@ -11,7 +12,7 @@ import 'rxjs/operators/map';
 /**
  * CRUD and custom logic related to users
  * */
-export class UserService extends CrudService {
+export class UsuarioService extends CrudService {
 
   constructor(private usuarioStoreService: UsuarioStoreService, http: Http, private router: Router) {
     super(http);
@@ -39,7 +40,7 @@ export class UserService extends CrudService {
       .post('pub/usuarios', credenciales)
       .map(r => {
         const token = r.json();
-        this.userStoreService.logIn({email: credenciales.email }, token);
+        this.usuarioStoreService.logIn({email: credenciales.email }, token);
         this.router.navigate(['']);
       });
   }
@@ -47,8 +48,8 @@ export class UserService extends CrudService {
   /**
    * Refresh the current user profile
    * */
-  public getProfile(): UserData {
-    return this.userStoreService.getProfile();
+  public getProfile(): DatosUsuario {
+    return this.usuarioStoreService.getProfile();
   }
 
 }
