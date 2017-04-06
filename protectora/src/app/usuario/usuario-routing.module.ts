@@ -4,10 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { UsuarioComponent } from './usuario.component';
+import { UsuarioService } from './usuario.service'
 
 const routes: Routes = [
   { path: 'usuario', component: UsuarioComponent, data: { title: 'Usuario actual' } },
-  { path: 'usuario/login', component: LoginComponent, data: { title: 'Loguear' } }
+  { path: '', component: LoginComponent, data: { title: 'Loguear' } }
 ];
 
 export const routableComponents = [
@@ -17,7 +18,8 @@ export const routableComponents = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers:[]
 })
 export class UsuarioRoutingModule { }
 

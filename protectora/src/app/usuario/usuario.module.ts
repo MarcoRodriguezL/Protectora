@@ -8,6 +8,8 @@ import { UsuarioComponent } from './usuario.component';
 import { LoginComponent } from './login/login.component';
 
 import { UsuarioService } from './usuario.service';
+import { UsuarioStoreService } from './../shared/usuario-store.service';
+
 
 @NgModule({
   imports: [
@@ -15,7 +17,7 @@ import { UsuarioService } from './usuario.service';
     FormsModule,
     UsuarioRoutingModule
   ],
-  declarations: [routableComponents],
-  providers: [UsuarioService]
+  declarations: [routableComponents,LoginComponent,UsuarioComponent],
+  providers: [UsuarioService,UsuarioStoreService]
 })
 export class UsuarioModule { }

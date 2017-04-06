@@ -6,7 +6,7 @@ import { DatosUsuario } from './../shared/model/model';
 import { UsuarioStoreService } from './../shared/usuario-store.service';
 import { Observable } from 'rxjs/Rx';
 
-import 'rxjs/operators/map';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 /**
