@@ -23,3 +23,9 @@ export enum Tipo {
     Reptil,
     Otros
 }
+
+export class DatosUsuario {
+  user?: string;
+  token?: string;
+  isLogged?: boolean;
+}
