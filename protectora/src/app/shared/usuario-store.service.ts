@@ -34,4 +34,10 @@ export class UsuarioStoreService extends DataStoreService {
     // To Do: refresh form API and persist
     return super.getData();
   }
+
+    public isloggedIn():boolean {
+      console.log(this.getProfile());
+      console.log();
+    return this.getProfile().isLogged;
+  }
 }

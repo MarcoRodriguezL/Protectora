@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { CanActivate }    from '@angular/router';
+import { UsuarioStoreService } from './../shared/usuario-store.service'
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-
-  //constructor(authService : AuthService){
-
-  //}
+authService:UsuarioStoreService;
+  constructor(authService : UsuarioStoreService){
+this.authService= authService;
+  }
 
   canActivate() {
-    return  true;//this.authService.isLoggedIn()
+    console.log(this.authService.isloggedIn());
+    return  this.authService.isloggedIn();
     
   }
 }
