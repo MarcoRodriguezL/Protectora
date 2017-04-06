@@ -1,19 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'smn-nuevo',
-  templateUrl: './nuevo.component.html',
-  styleUrls: ['./nuevo.component.css']
-})
-export class NuevoComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
-import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Tipo } from './../../shared/Model/model';
 import { Animal } from './../../shared/Model/model';
