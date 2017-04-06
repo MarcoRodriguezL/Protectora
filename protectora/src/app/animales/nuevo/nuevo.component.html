@@ -1,7 +1,7 @@
 <h1>
   Nuevo animal
-</h1>
-<!--<form (ngSubmit)="guardarAnimal(nuevoAnimal)" [formGroup]="nuevoAnimal" novalidate>
+</p>
+<form (ngSubmit)="guardarAnimal(nuevoAnimal)" [formGroup]="nuevoAnimal" novalidate>
   <div class="row">
     <label for="tipo" class="column">Tipo: </label>
     <select name="tipo" class="column">
@@ -11,4 +11,21 @@
       </option>
     </select>
   </div>
-</form>-->
+  <div class="row">
+    <label for="raza" class="column">Raza: </label>
+    <input name="raza" type="text" class="column">
+  </div>
+  <div class="row">
+    <label for="nombre" class="column">Nombre: </label>
+    <input name="nombre" class="column" type="text">
+  </div>
+  <div class="row">
+    <label for="sexo" class="column">Sexo: </label>
+    <input name="sexo" type="radio" [value]="M" class="column"><span>Macho</span>
+    <input name="sexo" type="radio" [value]="H" class="column"><span>Hembra</span>
+  </div>
+  <div class="row">
+    <input name="chip" type="checkbox" [value]="true">
+    <label for="chip" class="column">Chip</label>
+  </div>
+</form>
